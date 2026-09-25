@@ -1,0 +1,19 @@
+name: CD
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deployment
+        run: |
+          echo "CD berjalan dengan baik"
+          echo "Proses deployment siap dijalankan"
