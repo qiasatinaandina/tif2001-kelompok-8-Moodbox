@@ -5,19 +5,15 @@ Proyek pengembangan perangkat lunak berbasis web untuk mata kuliah Software Deve
 **Nama Aplikasi:** Moodbox Self Photo Studio Management System  
 **Mata Kuliah:** TIF2001 Software Development  
 ### Anggota Kelompok
-1. **Nama:** [Nama Anggota 1] — [NIM]
-2. **Nama:** [Nama Anggota 2] — [NIM]
-3. **Nama:** [Nama Anggota 3] — [NIM]
-4. **Nama:** [Nama Anggota 4] — [NIM]
+1. **Nama:** [Riszan Zakia] — [2413020210]
+2. **Nama:** [Qiasatina Andina] — [2413020217]
+3. **Nama:** [Chelsea Junior Pristca Perdana] — [2413020021]
 ---
 ## Latar Belakang
-Moodbox Self Photo Studio merupakan layanan studio foto mandiri yang memungkinkan pelanggan melakukan sesi foto secara lebih praktis dan fleksibel. Dalam proses pemesanan studio, pencatatan jadwal, pengelolaan data pelanggan, serta pengaturan sesi foto masih dapat mengalami kendala apabila dilakukan secara manual.
-Permasalahan tersebut dapat menyebabkan terjadinya kesalahan pencatatan jadwal, bentrokan waktu pemesanan, serta kesulitan dalam mengelola data booking pelanggan.
-Oleh karena itu, dibutuhkan sebuah sistem yang dapat membantu proses pengelolaan studio foto secara terstruktur dan terkomputerisasi.
+Moodbox Self Photo Studio merupakan layanan studio foto mandiri yang memungkinkan pelanggan melakukan sesi foto secara lebih praktis dan fleksibel. Dalam proses pemesanan studio, pencatatan jadwal, pengelolaan data pelanggan, serta pengaturan sesi foto masih dapat mengalami kendala apabila dilakukan secara manual. Permasalahan tersebut dapat menyebabkan terjadinya kesalahan pencatatan jadwal, bentrokan waktu pemesanan, serta kesulitan dalam mengelola data booking pelanggan. Oleh karena itu, dibutuhkan sebuah sistem yang dapat membantu proses pengelolaan studio foto secara terstruktur dan terkomputerisasi.
 ---
 ## Solusi Aplikasi
-**Moodbox Self Photo Studio Management System** adalah aplikasi berbasis web yang dirancang untuk membantu mengelola proses operasional dan pemesanan pada studio foto mandiri.
-Aplikasi ini menyediakan sistem pengelolaan booking sehingga pelanggan dapat melihat informasi sesi foto dan melakukan pemesanan sesuai jadwal yang tersedia. Sistem juga membantu pengelola studio dalam mengatur jadwal serta mengelola data pemesanan pelanggan.
+**Moodbox Self Photo Studio Management System** adalah sistem berbasis web yang dirancang untuk membantu mengelola proses operasional dan pemesanan pada studio foto mandiri. Aplikasi ini menyediakan sistem pengelolaan booking sehingga pelanggan dapat melihat informasi sesi foto dan melakukan pemesanan sesuai jadwal yang tersedia. Sistem juga membantu pengelola studio dalam mengatur jadwal serta mengelola data pemesanan pelanggan.
 ### Fitur Utama
 - Pemesanan sesi foto secara online
 - Pengelolaan jadwal booking
