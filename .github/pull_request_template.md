@@ -1,4 +1,3 @@
-cat > .github/pull_request_template.md <<'EOF'
 ## 📌 Description
 Jelaskan perubahan yang dilakukan pada project Moodbox Photoself.
 
@@ -49,5 +48,3 @@ Sertakan screenshot, GIF, atau output testing yang menunjukkan perubahan.
 
 ## 📝 Additional Notes
 Tambahkan informasi lain yang perlu diketahui reviewer.
-
-EOF
