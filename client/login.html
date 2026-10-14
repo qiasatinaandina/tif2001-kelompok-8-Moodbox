@@ -1,0 +1,149 @@
+html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk Akun | Moodbox Studio</title>
+    <link rel="stylesheet" href="auth.css">
+    <script src="auth.js" defer></script>
+</head>
+
+<body class="auth-page">
+
+    <header class="studio-header">
+        <a href="index.html" class="studio-logo">
+            <span class="logo-icon">▣</span>
+            <span>MOODBOX<small>STUDIO</small></span>
+        </a>
+
+        <nav class="studio-nav">
+            <a href="index.html">← Kembali ke Beranda</a>
+            <a href="#" class="whatsapp-link">◉ Concierge WhatsApp</a>
+        </nav>
+    </header>
+
+    <main class="auth-layout">
+
+        <section class="auth-showcase">
+            <div class="showcase-top">
+                <span class="eyebrow">EDITORIAL SELF-STUDIO</span>
+                <span class="rating">★ 4.9 <small>(1.2k+ ulasan)</small></span>
+            </div>
+
+            <h1>Abadikan momen autentik tanpa batasan.</h1>
+
+            <p class="showcase-description">
+                Kendalikan pencahayaan studio, klik remote rana nirkabel,
+                dan nikmati hasil foto resolusi tinggi.
+            </p>
+
+            <div class="photo-grid">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+                    alt="Contoh potret studio">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+                    alt="Contoh foto portrait">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+                    alt="Contoh foto kenangan">
+            </div>
+
+            <div class="showcase-quote">
+                <strong>✦ Your moment, your mood.</strong>
+                <p>
+                    Ruang untuk berekspresi, tertawa, dan menyimpan
+                    kenangan yang berarti.
+                </p>
+            </div>
+
+            <div class="showcase-features">
+                <span>◉ Cloud Storage</span>
+                <span>♧ Hasil Resolusi Tinggi</span>
+            </div>
+        </section>
+
+        <section class="auth-panel">
+            <div class="panel-badge">◉ PORTAL ANGGOTA MOODBOX</div>
+
+            <div class="auth-heading">
+                <h2>Selamat datang kembali</h2>
+                <p>
+                    Masuk untuk mengakses jadwal reservasi, unduh galeri
+                    softcopy resolusi tinggi, atau lanjutkan foto dari sesi terakhir.
+                </p>
+            </div>
+
+            <div class="social-buttons">
+                <button type="button" class="social-button" disabled>
+                    <span>G</span> Lanjutkan dengan Google
+                </button>
+                <button type="button" class="social-button" disabled>
+                    <span>●</span> Lanjutkan dengan Apple
+                </button>
+            </div>
+
+            <div class="form-divider">
+                <span>ATAU MASUK DENGAN EMAIL</span>
+            </div>
+
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="loginEmail">Email atau Nomor WhatsApp</label>
+                    <input type="text" id="loginEmail" name="email" placeholder="nama@email.com atau 0812xxxx"
+                        autocomplete="username" required>
+                    <small class="error-message" id="loginEmailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-row">
+                        <label for="loginPassword">Kata Sandi Akun</label>
+                        <a href="#" class="forgot-link" id="forgotPassword">
+                            Lupa kata sandi?
+                        </a>
+                    </div>
+
+                    <div class="password-wrapper">
+                        <input type="password" id="loginPassword" name="password" placeholder="Masukkan kata sandi"
+                            autocomplete="current-password" required>
+                        <button type="button" class="toggle-password" data-toggle-password="loginPassword"
+                            aria-label="Tampilkan kata sandi" aria-pressed="false">Lihat</button>
+                    </div>
+                    <small class="error-message" id="loginPasswordError"></small>
+                </div>
+
+                <label class="remember-option">
+                    <input type="checkbox" id="rememberMe">
+                    <span>Ingat saya di perangkat ini</span>
+                </label>
+
+                <button type="submit" class="auth-button">
+                    Masuk ke Akun Studio →
+                </button>
+
+                <p id="loginNotice" class="auth-notice" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="register-prompt">
+                Belum memiliki akun Moodbox?
+                <a href="register.html">Daftar Member Baru</a>
+            </div>
+
+            <div class="security-note">
+                ◈ Data terenkripsi aman &nbsp; • &nbsp;
+                Privasi anggota terjaga
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="studio-footer">
+        <span>© 2026 Moodbox Studio. Hak cipta dilindungi.</span>
+        <div>
+            <a href="#">Kebijakan Privasi</a>
+            <a href="#">Syarat & Ketentuan</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
