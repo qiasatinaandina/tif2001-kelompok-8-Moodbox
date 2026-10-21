@@ -73,3 +73,7 @@ exports.login = async (req, res) => {
     return res.status(500).json({ message: 'Terjadi kesalahan pada server' });
   }
 };
+
+exports.getMe = (req, res) => {
+  return res.status(200).json({ user: req.user });
+};
