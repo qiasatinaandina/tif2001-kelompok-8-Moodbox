@@ -1,0 +1,10 @@
+﻿{
+  "name": "moodbox-client",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint \"**/*.js\"",
+    "format": "prettier --write \"**/*.{html,css,js,json}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json}\""
+  }
+}
