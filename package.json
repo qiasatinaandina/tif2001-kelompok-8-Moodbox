@@ -1,0 +1,34 @@
+{
+  "name": "softdev_new",
+  "version": "1.0.0",
+  "description": "Moodbox Self Photo Studio Management System - proyek TIF2001 Software Development",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "lint": "eslint \"client/**/*.js\"",
+    "format": "prettier --write \"client/**/*.{html,css,js,json}\"",
+    "format:check": "prettier --check \"client/**/*.{html,css,js,json}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiasatinaandina/tif2001-kelompok-8-Moodbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/qiasatinaandina/tif2001-kelompok-8-Moodbox/issues"
+  },
+  "homepage": "https://github.com/qiasatinaandina/tif2001-kelompok-8-Moodbox#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10"
+  }
+}

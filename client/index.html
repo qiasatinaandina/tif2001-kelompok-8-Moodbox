@@ -1,247 +1,259 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#fff8f3">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff8f3" />
     <title>Moodbox Studio — Booking</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="navbar">
-        <a class="brand" href="#" aria-label="Moodbox Studio">
-            <span class="brand-icon">M</span>
-            <span>MOODBOX <small>STUDIO</small></span>
-        </a>
+      <a class="brand" href="#" aria-label="Moodbox Studio">
+        <span class="brand-icon">M</span>
+        <span>MOODBOX <small>STUDIO</small></span>
+      </a>
 
-        <nav class="nav-links">
-            <a href="#booking">Beranda</a>
-            <a href="#kategori">Kategori Foto</a>
-            <a class="active" href="#paket">Booking Slot</a>
-            <a href="#tema">Galeri & Tema</a>
-            <a href="#footer">Pusat Bantuan</a>
-        </nav>
+      <nav class="nav-links">
+        <a href="#booking">Beranda</a>
+        <a href="#kategori">Kategori Foto</a>
+        <a class="active" href="#paket">Booking Slot</a>
+        <a href="#tema">Galeri & Tema</a>
+        <a href="#footer">Pusat Bantuan</a>
+      </nav>
 
-        <button class="profile" type="button" aria-label="Profil pengguna">👤</button>
+      <button class="profile" type="button" aria-label="Profil pengguna">👤</button>
     </header>
 
     <section class="page-heading" id="booking">
-        <p class="eyebrow">MOODBOX PHOTO STUDIO</p>
-        <h1>Pilih Paket &<br>Tema Studio</h1>
-        <p>Temukan pengalaman foto yang sesuai dengan mood kamu.</p>
+      <p class="eyebrow">MOODBOX PHOTO STUDIO</p>
+      <h1>Pilih Paket &<br />Tema Studio</h1>
+      <p>Temukan pengalaman foto yang sesuai dengan mood kamu.</p>
     </section>
 
     <main class="layout">
-        <div class="booking-content">
-            <div class="steps" aria-label="Tahapan booking">
-                <span class="current">1. Paket & Tema</span>
-                <span>2. Jadwal & Jam</span>
-                <span>3. Add-on & Item</span>
-                <span>4. Pembayaran</span>
-            </div>
-
-            <section class="section" id="kategori">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">LANGKAH 1.1</p>
-                        <h2>Pilih Kategori Sesi</h2>
-                    </div>
-                </div>
-
-                <div class="chips" id="category-list">
-                    <button class="chip selected" data-category="Semua" type="button">Semua</button>
-                    <button class="chip" data-category="Solo" type="button">Solo / Personal</button>
-                    <button class="chip" data-category="Duo" type="button">Duo / Bestie</button>
-                    <button class="chip" data-category="Family" type="button">Family / Grup</button>
-                    <button class="chip" data-category="Graduation" type="button">Graduation</button>
-                </div>
-            </section>
-
-            <section class="section" id="paket">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">LANGKAH 1.2</p>
-                        <h2>Pilih Paket Sesi Foto</h2>
-                    </div>
-                    <span class="muted">Pilih satu paket</span>
-                </div>
-
-                <div class="package-grid" id="package-list">
-                    <article class="package-card chosen" data-name="The Duo Pod" data-price="150000"
-                        data-category="Solo Duo">
-                        <span class="tag">✨ Terpopuler</span>
-                        <h3>The Duo Pod</h3>
-                        <p class="muted">Sesi foto simpel untuk momen spesial.</p>
-                        <p class="price">Rp150.000</p>
-                        <ul>
-                            <li>Foto studio sesuai durasi paket</li>
-                            <li>File foto digital</li>
-                            <li>Layout foto pilihan</li>
-                        </ul>
-                        <button class="choose-button" type="button">Dipilih ✓</button>
-                    </article>
-
-                    <article class="package-card" data-name="Solo Signature" data-price="250000"
-                        data-category="Solo Graduation">
-                        <h3>Solo Signature</h3>
-                        <p class="muted">Ekspresikan gaya personalmu.</p>
-                        <p class="price">Rp250.000</p>
-                        <ul>
-                            <li>Sesi foto personal</li>
-                            <li>File foto digital</li>
-                            <li>Pilihan tema studio</li>
-                        </ul>
-                        <button class="choose-button" type="button">Pilih Paket</button>
-                    </article>
-
-                    <article class="package-card" data-name="Squad Celebration" data-price="350000"
-                        data-category="Duo Family Graduation">
-                        <h3>Squad Celebration</h3>
-                        <p class="muted">Rayakan momen bersama orang tersayang.</p>
-                        <p class="price">Rp350.000</p>
-                        <ul>
-                            <li>Sesi foto grup</li>
-                            <li>File foto digital</li>
-                            <li>Layout foto pilihan</li>
-                        </ul>
-                        <button class="choose-button" type="button">Pilih Paket</button>
-                    </article>
-                </div>
-                <p class="note">*Harga di atas merupakan contoh awal. Sesuaikan dengan harga resmi Moodbox.</p>
-            </section>
-
-            <section class="section" id="tema">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">LANGKAH 1.3</p>
-                        <h2>Filter Pencahayaan & Mood Studio</h2>
-                    </div>
-                </div>
-
-                <div class="theme-grid">
-                    <button class="theme-card selected" data-theme="Warm Sunset" type="button">
-                        <span class="theme-art sunset"></span>
-                        <strong>Warm Sunset</strong>
-                        <small>Hangat dan romantis</small>
-                    </button>
-                    <button class="theme-card" data-theme="Monochrome Classic" type="button">
-                        <span class="theme-art mono"></span>
-                        <strong>Monochrome Classic</strong>
-                        <small>Minimalis dan elegan</small>
-                    </button>
-                    <button class="theme-card" data-theme="Soft Pink" type="button">
-                        <span class="theme-art pink"></span>
-                        <strong>Soft Pink</strong>
-                        <small>Lembut dan ceria</small>
-                    </button>
-                    <button class="theme-card" data-theme="Moody Espresso" type="button">
-                        <span class="theme-art espresso"></span>
-                        <strong>Moody Espresso</strong>
-                        <small>Hangat dan dramatis</small>
-                    </button>
-                </div>
-            </section>
-
-            <section class="section" id="template">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">LANGKAH 1.4</p>
-                        <h2>Pilihan Template Frame Foto</h2>
-                    </div>
-                </div>
-
-                <div class="template-grid">
-                    <button class="template-card selected" data-template="Retro Film Strip" type="button">
-                        <span class="frame-art film"><i></i><i></i><i></i></span>
-                        <strong>Retro Film Strip</strong>
-                        <small>4 foto vertikal</small>
-                    </button>
-                    <button class="template-card" data-template="Polaroid Classic" type="button">
-                        <span class="frame-art polaroid"><i></i></span>
-                        <strong>Polaroid Classic</strong>
-                        <small>Gaya foto klasik</small>
-                    </button>
-                    <button class="template-card" data-template="Editorial Collage" type="button">
-                        <span class="frame-art collage"><i></i><i></i><i></i><i></i></span>
-                        <strong>Editorial Collage</strong>
-                        <small>Kolase modern</small>
-                    </button>
-                    <button class="template-card" data-template="Minimal Grid" type="button">
-                        <span class="frame-art grid-art"><i></i><i></i><i></i><i></i></span>
-                        <strong>Minimal Grid</strong>
-                        <small>4 foto dalam frame</small>
-                    </button>
-                </div>
-            </section>
-
-            <section class="help-box">
-                <div>
-                    <strong>Butuh Saran Mood atau Kombinasi Warna?</strong>
-                    <p class="muted">Pilih tema yang paling sesuai dengan gaya foto yang kamu inginkan.</p>
-                </div>
-                <a href="#footer" class="outline-button">Chat Customer Service</a>
-            </section>
+      <div class="booking-content">
+        <div class="steps" aria-label="Tahapan booking">
+          <span class="current">1. Paket & Tema</span>
+          <span>2. Jadwal & Jam</span>
+          <span>3. Add-on & Item</span>
+          <span>4. Pembayaran</span>
         </div>
 
-        <aside class="summary">
-            <p class="eyebrow">LIVE RESERVATION</p>
-            <h2>Ringkasan Booking</h2>
+        <section class="section" id="kategori">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">LANGKAH 1.1</p>
+              <h2>Pilih Kategori Sesi</h2>
+            </div>
+          </div>
 
-            <div class="summary-row">
-                <span>Paket</span>
-                <strong id="summary-package">The Duo Pod</strong>
-            </div>
-            <div class="summary-row">
-                <span>Kategori</span>
-                <strong id="summary-category">Solo / Personal</strong>
-            </div>
-            <div class="summary-row">
-                <span>Tema</span>
-                <strong id="summary-theme">Warm Sunset</strong>
-            </div>
-            <div class="summary-row">
-                <span>Template</span>
-                <strong id="summary-template">Retro Film Strip</strong>
-            </div>
+          <div class="chips" id="category-list">
+            <button class="chip selected" data-category="Semua" type="button">Semua</button>
+            <button class="chip" data-category="Solo" type="button">Solo / Personal</button>
+            <button class="chip" data-category="Duo" type="button">Duo / Bestie</button>
+            <button class="chip" data-category="Family" type="button">Family / Grup</button>
+            <button class="chip" data-category="Graduation" type="button">Graduation</button>
+          </div>
+        </section>
 
-            <div class="summary-total">
-                <span>Total sementara</span>
-                <strong id="summary-price">Rp150.000</strong>
+        <section class="section" id="paket">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">LANGKAH 1.2</p>
+              <h2>Pilih Paket Sesi Foto</h2>
             </div>
+            <span class="muted">Pilih satu paket</span>
+          </div>
 
-            <p class="note">Harga belum termasuk add-on atau biaya tambahan jika tersedia.</p>
-            <button class="primary-button" id="continue-button" type="button">
-                Lanjut Pilih Jadwal & Jam →
+          <div class="package-grid" id="package-list">
+            <article
+              class="package-card chosen"
+              data-name="The Duo Pod"
+              data-price="150000"
+              data-category="Solo Duo"
+            >
+              <span class="tag">✨ Terpopuler</span>
+              <h3>The Duo Pod</h3>
+              <p class="muted">Sesi foto simpel untuk momen spesial.</p>
+              <p class="price">Rp150.000</p>
+              <ul>
+                <li>Foto studio sesuai durasi paket</li>
+                <li>File foto digital</li>
+                <li>Layout foto pilihan</li>
+              </ul>
+              <button class="choose-button" type="button">Dipilih ✓</button>
+            </article>
+
+            <article
+              class="package-card"
+              data-name="Solo Signature"
+              data-price="250000"
+              data-category="Solo Graduation"
+            >
+              <h3>Solo Signature</h3>
+              <p class="muted">Ekspresikan gaya personalmu.</p>
+              <p class="price">Rp250.000</p>
+              <ul>
+                <li>Sesi foto personal</li>
+                <li>File foto digital</li>
+                <li>Pilihan tema studio</li>
+              </ul>
+              <button class="choose-button" type="button">Pilih Paket</button>
+            </article>
+
+            <article
+              class="package-card"
+              data-name="Squad Celebration"
+              data-price="350000"
+              data-category="Duo Family Graduation"
+            >
+              <h3>Squad Celebration</h3>
+              <p class="muted">Rayakan momen bersama orang tersayang.</p>
+              <p class="price">Rp350.000</p>
+              <ul>
+                <li>Sesi foto grup</li>
+                <li>File foto digital</li>
+                <li>Layout foto pilihan</li>
+              </ul>
+              <button class="choose-button" type="button">Pilih Paket</button>
+            </article>
+          </div>
+          <p class="note">
+            *Harga di atas merupakan contoh awal. Sesuaikan dengan harga resmi Moodbox.
+          </p>
+        </section>
+
+        <section class="section" id="tema">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">LANGKAH 1.3</p>
+              <h2>Filter Pencahayaan & Mood Studio</h2>
+            </div>
+          </div>
+
+          <div class="theme-grid">
+            <button class="theme-card selected" data-theme="Warm Sunset" type="button">
+              <span class="theme-art sunset"></span>
+              <strong>Warm Sunset</strong>
+              <small>Hangat dan romantis</small>
             </button>
-            <p class="secure-note">Pilihanmu dapat diperiksa kembali sebelum pembayaran.</p>
-            <p class="status-message" id="status-message" role="status"></p>
-        </aside>
+            <button class="theme-card" data-theme="Monochrome Classic" type="button">
+              <span class="theme-art mono"></span>
+              <strong>Monochrome Classic</strong>
+              <small>Minimalis dan elegan</small>
+            </button>
+            <button class="theme-card" data-theme="Soft Pink" type="button">
+              <span class="theme-art pink"></span>
+              <strong>Soft Pink</strong>
+              <small>Lembut dan ceria</small>
+            </button>
+            <button class="theme-card" data-theme="Moody Espresso" type="button">
+              <span class="theme-art espresso"></span>
+              <strong>Moody Espresso</strong>
+              <small>Hangat dan dramatis</small>
+            </button>
+          </div>
+        </section>
+
+        <section class="section" id="template">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">LANGKAH 1.4</p>
+              <h2>Pilihan Template Frame Foto</h2>
+            </div>
+          </div>
+
+          <div class="template-grid">
+            <button class="template-card selected" data-template="Retro Film Strip" type="button">
+              <span class="frame-art film"><i></i><i></i><i></i></span>
+              <strong>Retro Film Strip</strong>
+              <small>4 foto vertikal</small>
+            </button>
+            <button class="template-card" data-template="Polaroid Classic" type="button">
+              <span class="frame-art polaroid"><i></i></span>
+              <strong>Polaroid Classic</strong>
+              <small>Gaya foto klasik</small>
+            </button>
+            <button class="template-card" data-template="Editorial Collage" type="button">
+              <span class="frame-art collage"><i></i><i></i><i></i><i></i></span>
+              <strong>Editorial Collage</strong>
+              <small>Kolase modern</small>
+            </button>
+            <button class="template-card" data-template="Minimal Grid" type="button">
+              <span class="frame-art grid-art"><i></i><i></i><i></i><i></i></span>
+              <strong>Minimal Grid</strong>
+              <small>4 foto dalam frame</small>
+            </button>
+          </div>
+        </section>
+
+        <section class="help-box">
+          <div>
+            <strong>Butuh Saran Mood atau Kombinasi Warna?</strong>
+            <p class="muted">Pilih tema yang paling sesuai dengan gaya foto yang kamu inginkan.</p>
+          </div>
+          <a href="#footer" class="outline-button">Chat Customer Service</a>
+        </section>
+      </div>
+
+      <aside class="summary">
+        <p class="eyebrow">LIVE RESERVATION</p>
+        <h2>Ringkasan Booking</h2>
+
+        <div class="summary-row">
+          <span>Paket</span>
+          <strong id="summary-package">The Duo Pod</strong>
+        </div>
+        <div class="summary-row">
+          <span>Kategori</span>
+          <strong id="summary-category">Solo / Personal</strong>
+        </div>
+        <div class="summary-row">
+          <span>Tema</span>
+          <strong id="summary-theme">Warm Sunset</strong>
+        </div>
+        <div class="summary-row">
+          <span>Template</span>
+          <strong id="summary-template">Retro Film Strip</strong>
+        </div>
+
+        <div class="summary-total">
+          <span>Total sementara</span>
+          <strong id="summary-price">Rp150.000</strong>
+        </div>
+
+        <p class="note">Harga belum termasuk add-on atau biaya tambahan jika tersedia.</p>
+        <button class="primary-button" id="continue-button" type="button">
+          Lanjut Pilih Jadwal & Jam →
+        </button>
+        <p class="secure-note">Pilihanmu dapat diperiksa kembali sebelum pembayaran.</p>
+        <p class="status-message" id="status-message" role="status"></p>
+      </aside>
     </main>
 
     <footer id="footer">
-        <div>
-            <a class="brand" href="#">
-                <span class="brand-icon">M</span>
-                <span>MOODBOX <small>STUDIO</small></span>
-            </a>
-            <p>Abadikan momen, ceritakan mood kamu.</p>
-        </div>
-        <div>
-            <strong>MOODBOX STUDIO</strong>
-            <p>Studio foto untuk momen spesialmu.</p>
-        </div>
-        <div>
-            <strong>LOKASI STUDIO</strong>
-            <p>Informasi alamat dapat ditambahkan di sini.</p>
-        </div>
-        <div>
-            <strong>OPERASIONAL</strong>
-            <p>Jam buka dapat disesuaikan dengan jadwal resmi.</p>
-        </div>
+      <div>
+        <a class="brand" href="#">
+          <span class="brand-icon">M</span>
+          <span>MOODBOX <small>STUDIO</small></span>
+        </a>
+        <p>Abadikan momen, ceritakan mood kamu.</p>
+      </div>
+      <div>
+        <strong>MOODBOX STUDIO</strong>
+        <p>Studio foto untuk momen spesialmu.</p>
+      </div>
+      <div>
+        <strong>LOKASI STUDIO</strong>
+        <p>Informasi alamat dapat ditambahkan di sini.</p>
+      </div>
+      <div>
+        <strong>OPERASIONAL</strong>
+        <p>Jam buka dapat disesuaikan dengan jadwal resmi.</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
