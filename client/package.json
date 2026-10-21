@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "moodbox-client",
   "version": "1.0.0",
   "private": true,
@@ -6,5 +6,12 @@
     "lint": "eslint \"**/*.js\"",
     "format": "prettier --write \"**/*.{html,css,js,json}\"",
     "format:check": "prettier --check \"**/*.{html,css,js,json}\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10"
   }
 }
