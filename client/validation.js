@@ -26,13 +26,13 @@ function isTermsAccepted(accepted) {
 }
 
 module.exports = {
-    isValidEmail,
-    isValidEmailOrPhone,
-    isValidName,
-    isValidPassword,
-    passwordsMatch,
-    isTermsAccepted,
-  };
+  isValidEmail,
+  isValidEmailOrPhone,
+  isValidName,
+  isValidPassword,
+  passwordsMatch,
+  isTermsAccepted,
+};
 
 if (typeof window !== "undefined") {
   window.MoodboxValidation = {
