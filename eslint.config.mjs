@@ -15,6 +15,7 @@ export default [
       sourceType: "script",
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
     },
     rules: {
@@ -23,6 +24,14 @@ export default [
       eqeqeq: "error",
       "prefer-const": "error",
       "no-console": "warn",
+    },
+  },
+  {
+    files: ["client/**/*.test.js"],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
     },
   },
   prettier,
