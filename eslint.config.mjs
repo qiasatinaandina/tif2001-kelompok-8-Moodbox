@@ -7,7 +7,9 @@ export default [
   {
     ignores: ["node_modules/**", "dist/**"],
   },
+
   js.configs.recommended,
+
   {
     files: ["client/**/*.js"],
     languageOptions: {
@@ -25,5 +27,25 @@ export default [
       "no-console": "warn",
     },
   },
+
+  {
+    files: ["client/validation.js"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
+
+  {
+    files: ["client/**/*.test.js"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.jest,
+      },
+    },
+  },
+
   prettier,
 ];
