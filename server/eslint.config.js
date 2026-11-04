@@ -19,5 +19,9 @@ module.exports = [
       'prefer-const': 'error',
     },
   },
+  {
+    files: ['tests/**/*.js'],
+    languageOptions: { globals: { ...globals.jest } },
+  },
   prettier,
 ];
