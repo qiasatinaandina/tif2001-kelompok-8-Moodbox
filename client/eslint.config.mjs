@@ -1,4 +1,3 @@
-
 import js from "@eslint/js";
 import globals from "globals";
 import prettier from "eslint-config-prettier";
@@ -32,6 +31,7 @@ export default [
     files: ["**/validation.js"],
     languageOptions: {
       globals: {
+        ...globals.browser,
         ...globals.node,
       },
     },
@@ -41,6 +41,7 @@ export default [
     files: ["**/*.test.js"],
     languageOptions: {
       globals: {
+        ...globals.browser,
         ...globals.node,
         ...globals.jest,
       },
