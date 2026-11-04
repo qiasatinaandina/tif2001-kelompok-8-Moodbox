@@ -25,8 +25,7 @@ function isTermsAccepted(accepted) {
   return accepted === true;
 }
 
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = {
+module.exports = {
     isValidEmail,
     isValidEmailOrPhone,
     isValidName,
@@ -34,7 +33,6 @@ if (typeof module !== "undefined" && module.exports) {
     passwordsMatch,
     isTermsAccepted,
   };
-}
 
 if (typeof window !== "undefined") {
   window.MoodboxValidation = {

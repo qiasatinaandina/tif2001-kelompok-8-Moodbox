@@ -29,7 +29,7 @@ export default [
   },
 
   {
-    files: ["validation.js"],
+    files: ["**/validation.js"],
     languageOptions: {
       globals: {
         ...globals.node,
