@@ -1,12 +1,22 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
-app.use(cors());
+
+const allowedOrigins = (process.env.CORS_ORIGIN || '')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+// Jika CORS_ORIGIN kosong (mode dev), semua origin diizinkan
+app.use(cors(allowedOrigins.length > 0 ? { origin: allowedOrigins } : {}));
 app.use(express.json());
+
+app.get('/api/v1/health', (req, res) => {
+  return res.status(200).json({ status: 'ok' });
+});
+
 app.use('/api/v1/auth', authRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server Moodbox berjalan di port ${PORT}`));
+module.exports = app;

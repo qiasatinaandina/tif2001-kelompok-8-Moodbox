@@ -1,50 +1,39 @@
-## 📌 Description
-Jelaskan perubahan yang dilakukan pada project Moodbox Photoself.
+## Deskripsi
+<!-- Apa yang dibuat/diubah dan kenapa (2-3 kalimat) -->
 
-Contoh:
-> Menambahkan fitur pemilihan mood dan integrasi tampilan kamera selfie.
 
-## 🔧 Type of Change
-- [ ] `feat`: Fitur baru
-- [ ] `fix`: Perbaikan bug
-- [ ] `refactor`: Refaktorisasi kode tanpa mengubah fungsionalitas
-- [ ] `test`: Penambahan atau pembaruan unit/integration test
-- [ ] `docs`: Pembaruan dokumentasi
-- [ ] `chore`: Pembaruan konfigurasi/dependensi
+## Pertemuan & Peran
+- Pertemuan: [6 / 7 / 8 / 9]
+- Peran: [Frontend / Backend / DevOps]
 
-## 🔗 Related Issue
+## Tipe Perubahan
+- [ ] feat
+- [ ] fix
+- [ ] refactor
+- [ ] test
+- [ ] docs
+- [ ] chore / ci
+
+## Related Issue
 Closes #
 
-## 😊 Moodbox Photoself Module
-- [ ] Mood Selection
-- [ ] Camera / Selfie
-- [ ] Photo Capture
-- [ ] Filter / Photo Effect
-- [ ] Photo Preview
-- [ ] Gallery / Photo History
-- [ ] Authentication
-- [ ] Frontend / UI/UX
-- [ ] Backend / API
-- [ ] Database
-- [ ] QA / Testing
-- [ ] DevOps / CI/CD
+## Testing
+- [ ] Sudah diuji lokal
+- [ ] CI hijau (jika sudah aktif)
+<!-- Tulis singkat apa yang diuji -->
 
-## 🧪 Testing
-Jelaskan pengujian yang telah dilakukan.
 
-- [ ] Local testing sudah dijalankan dan dinyatakan pass.
-- [ ] Tidak ada error pada fitur yang diubah.
-- [ ] Integration testing sudah dilakukan jika diperlukan.
+## Checklist Keamanan & Proses
+- [ ] Tidak ada password, token, API key, atau file `.env` di commit
+- [ ] Branch dari `main` terbaru, commit atomik (Conventional Commits)
+- [ ] Reviewer sudah ditetapkan
 
-## 🔐 Developer Checklist
-- [ ] Tidak ada password, API key, token, atau credential yang di-commit.
-- [ ] Tidak ada file `.env` yang di-commit.
-- [ ] Kode mengikuti naming convention tim.
-- [ ] Kode mengikuti linting rules.
-- [ ] Perubahan tidak merusak fitur yang sudah ada.
+## Evidence
+<!-- Screenshot / GIF / log sesuai peran -->
 
-## 📸 Evidence / Screenshots
-Sertakan screenshot, GIF, atau output testing yang menunjukkan perubahan.
 
-## 📝 Additional Notes
-Tambahkan informasi lain yang perlu diketahui reviewer.
+## Catatan untuk Reviewer
+<!-- Hal yang perlu perhatian khusus, kendala, atau yang belum selesai -->
+
+---
+Template per peran: tambahkan `?template=frontend.md`, `backend.md`, atau `devops.md` di URL saat membuat PR.

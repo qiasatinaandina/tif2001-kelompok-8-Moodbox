@@ -1,10 +1,11 @@
 const express = require('express');
-const router = express.Router();
-const { register, login } = require('../controllers/authController');
+const { register, login, getMe } = require('../controllers/authController');
 const verifyToken = require('../middlewares/verifyToken');
+
+const router = express.Router();
 
 router.post('/register', register);
 router.post('/login', login);
-router.get('/me', verifyToken, (req, res) => res.json({ user: req.user })); // untuk uji middleware
+router.get('/me', verifyToken, getMe);
 
 module.exports = router;
