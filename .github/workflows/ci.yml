@@ -16,8 +16,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check repository structure
-        run: |
-          echo "CI berjalan dengan baik"
-          echo "Repository: tif2001-PARAMA-Stokly"
-          ls -la
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Frontend Lint
+        run: npm run lint
