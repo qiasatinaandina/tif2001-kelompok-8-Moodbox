@@ -29,7 +29,7 @@ module.exports = [
 
   // File yang menggunakan Node.js / CommonJS
   {
-    files: ["**/validation.js"],
+    files: ["**/validators.js"],
     languageOptions: {
       sourceType: "commonjs",
       globals: {

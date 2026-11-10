@@ -5,15 +5,19 @@ const {
   isValidPassword,
   passwordsMatch,
   isTermsAccepted,
-} = require("./validation");
+} = require("../validators");
 
 describe("Pengujian Validasi Form Moodbox", () => {
   test("Email dengan format benar harus valid", () => {
     expect(isValidEmail("riszan@gmail.com")).toBe(true);
   });
 
-  test("Email tanpa format benar harus tidak valid", () => {
+  test("Email dengan format salah harus tidak valid", () => {
     expect(isValidEmail("riszan.com")).toBe(false);
+  });
+
+  test("Email kosong harus tidak valid", () => {
+    expect(isValidEmail("")).toBe(false);
   });
 
   test("Nomor HP Indonesia harus valid", () => {
@@ -30,6 +34,10 @@ describe("Pengujian Validasi Form Moodbox", () => {
 
   test("Password minimal delapan karakter harus valid", () => {
     expect(isValidPassword("moodbox123")).toBe(true);
+  });
+
+  test("Password tepat delapan karakter harus valid", () => {
+    expect(isValidPassword("12345678")).toBe(true);
   });
 
   test("Password kurang dari delapan karakter harus tidak valid", () => {
