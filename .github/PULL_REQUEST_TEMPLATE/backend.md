@@ -1,14 +1,16 @@
 ## Deskripsi
+
 <!-- Endpoint/modul/skema apa yang dibuat dan cara kerjanya -->
 
-
 ## Pertemuan
+
 - [ ] P6: Tabel users, register, login, verifyToken
 - [ ] P7: ESLint/Prettier server, rapikan controller/routes
 - [ ] P8: Unit test hashing, token, endpoint
 - [ ] P9: Finalisasi & update kontrak API
 
 ## Tipe Perubahan
+
 - [ ] feat
 - [ ] fix
 - [ ] refactor
@@ -17,9 +19,11 @@
 - [ ] chore
 
 ## Related Issue
+
 Closes #
 
 ## Cek Backend
+
 - [ ] Password di-hash bcryptjs (salt 10), tidak pernah dikembalikan di response
 - [ ] JWT 24 jam, memakai `process.env.JWT_SECRET`
 - [ ] `role` tidak diambil dari request body
@@ -30,14 +34,17 @@ Closes #
 - [ ] `npm test` lolos, tidak memakai database produksi (jika berlaku)
 
 ## Keamanan & Proses
+
 - [ ] Tidak ada credential / `.env` / `node_modules` di commit
 - [ ] Branch dari `main` terbaru, commit atomik
 
 ## Evidence
-- Postman/Thunder Client (sukses): 
-- Postman/Thunder Client (error): 
-- Tabel `users` / hash password: 
-- Lint/test hijau (jika berlaku): 
+
+- Postman/Thunder Client (sukses):
+- Postman/Thunder Client (error):
+- Tabel `users` / hash password:
+- Lint/test hijau (jika berlaku):
 
 ## Catatan untuk Reviewer
+
 <!-- Perubahan kontrak API yang berdampak ke frontend -->

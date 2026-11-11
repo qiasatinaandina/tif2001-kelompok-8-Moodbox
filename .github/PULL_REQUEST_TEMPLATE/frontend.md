@@ -1,14 +1,16 @@
 ## Deskripsi
+
 <!-- UI/fitur apa yang dibuat dan cara kerjanya -->
 
-
 ## Pertemuan
+
 - [ ] P6: UI Login/Register
 - [ ] P7: ESLint/Prettier client
 - [ ] P8: Unit test validasi form
 - [ ] P9: Finalisasi & dokumentasi UI
 
 ## Tipe Perubahan
+
 - [ ] feat
 - [ ] fix
 - [ ] refactor
@@ -17,9 +19,11 @@
 - [ ] chore
 
 ## Related Issue
+
 Closes #
 
 ## Cek Frontend
+
 - [ ] Endpoint & nama field sesuai `docs/api_specifications.md`
 - [ ] URL API tidak di-hardcode
 - [ ] Validasi form berjalan (email, min. 8 karakter, konfirmasi password)
@@ -29,14 +33,17 @@ Closes #
 - [ ] `npm test` lolos (jika berlaku)
 
 ## Keamanan & Proses
+
 - [ ] Tidak ada credential / `.env` / `node_modules` di commit
 - [ ] Branch dari `main` terbaru, commit atomik
 
 ## Evidence
-- Default: 
-- Error validasi: 
-- Loading: 
-- Lint/test hijau (jika berlaku): 
+
+- Default:
+- Error validasi:
+- Loading:
+- Lint/test hijau (jika berlaku):
 
 ## Catatan untuk Reviewer
+
 <!-- Yang belum selesai / butuh backend -->
