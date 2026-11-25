@@ -1,8 +1,8 @@
-const pool = require("../config/db");
-const AppError = require("../utils/AppError");
-const { parsePagination, buildMeta } = require("../utils/pagination");
-const { buildPackageFilter, validatePackageInput } = require("../utils/packageQuery");
-const { uploadImage, removeImage } = require("../services/storage.service");
+const pool = require('../config/db');
+const AppError = require('../utils/AppError');
+const { parsePagination, buildMeta } = require('../utils/pagination');
+const { buildPackageFilter, validatePackageInput } = require('../utils/packageQuery');
+const { uploadImage, removeImage } = require('../services/storage.service');
 
 const BASE_SELECT = `
   SELECT p.*, c.name AS category_name
@@ -34,7 +34,7 @@ async function listPackages(req, res, next) {
 async function getPackage(req, res, next) {
   try {
     const { rows } = await pool.query(`${BASE_SELECT} WHERE p.id = $1`, [req.params.id]);
-    if (!rows.length) throw new AppError(404, "Paket tidak ditemukan");
+    if (!rows.length) throw new AppError(404, 'Paket tidak ditemukan');
     res.json({ success: true, data: rows[0] });
   } catch (err) {
     next(err);
@@ -46,7 +46,7 @@ async function createPackage(req, res, next) {
   let uploaded = null;
   try {
     const { errors, values } = validatePackageInput(req.body);
-    if (errors.length) throw new AppError(400, errors.join("; "));
+    if (errors.length) throw new AppError(400, errors.join('; '));
 
     if (req.file) uploaded = await uploadImage(req.file);
 
@@ -56,9 +56,14 @@ async function createPackage(req, res, next) {
        VALUES ($1,$2,$3,$4,$5,$6,$7,$8,COALESCE($9, TRUE))
        RETURNING *`,
       [
-        values.category_id ?? null, values.name, values.description ?? null,
-        values.price, values.duration_min, values.max_pax,
-        uploaded ? uploaded.url : null, uploaded ? uploaded.path : null,
+        values.category_id ?? null,
+        values.name,
+        values.description ?? null,
+        values.price,
+        values.duration_min,
+        values.max_pax,
+        uploaded ? uploaded.url : null,
+        uploaded ? uploaded.path : null,
         values.is_active ?? null,
       ]
     );
@@ -74,13 +79,12 @@ async function updatePackage(req, res, next) {
   let uploaded = null;
   try {
     const { errors, values } = validatePackageInput(req.body, { partial: true });
-    if (errors.length) throw new AppError(400, errors.join("; "));
+    if (errors.length) throw new AppError(400, errors.join('; '));
 
-    const { rows: oldRows } = await pool.query(
-      "SELECT image_path FROM packages WHERE id = $1",
-      [req.params.id]
-    );
-    if (!oldRows.length) throw new AppError(404, "Paket tidak ditemukan");
+    const { rows: oldRows } = await pool.query('SELECT image_path FROM packages WHERE id = $1', [
+      req.params.id,
+    ]);
+    if (!oldRows.length) throw new AppError(404, 'Paket tidak ditemukan');
 
     if (req.file) uploaded = await uploadImage(req.file);
 
@@ -99,10 +103,15 @@ async function updatePackage(req, res, next) {
        WHERE id = $10
        RETURNING *`,
       [
-        values.category_id ?? null, values.name ?? null, values.description ?? null,
-        values.price ?? null, values.duration_min ?? null, values.max_pax ?? null,
+        values.category_id ?? null,
+        values.name ?? null,
+        values.description ?? null,
+        values.price ?? null,
+        values.duration_min ?? null,
+        values.max_pax ?? null,
         values.is_active ?? null,
-        uploaded ? uploaded.url : null, uploaded ? uploaded.path : null,
+        uploaded ? uploaded.url : null,
+        uploaded ? uploaded.path : null,
         req.params.id,
       ]
     );
@@ -118,13 +127,12 @@ async function updatePackage(req, res, next) {
 // DELETE /api/v1/packages/:id
 async function deletePackage(req, res, next) {
   try {
-    const { rows } = await pool.query(
-      "DELETE FROM packages WHERE id = $1 RETURNING image_path",
-      [req.params.id]
-    );
-    if (!rows.length) throw new AppError(404, "Paket tidak ditemukan");
+    const { rows } = await pool.query('DELETE FROM packages WHERE id = $1 RETURNING image_path', [
+      req.params.id,
+    ]);
+    if (!rows.length) throw new AppError(404, 'Paket tidak ditemukan');
     await removeImage(rows[0].image_path).catch(() => {});
-    res.json({ success: true, message: "Paket berhasil dihapus" });
+    res.json({ success: true, message: 'Paket berhasil dihapus' });
   } catch (err) {
     next(err);
   }

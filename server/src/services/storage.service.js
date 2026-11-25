@@ -1,10 +1,10 @@
-const { randomUUID } = require("node:crypto");
-const { getSupabase, getBucket } = require("../config/supabase");
-const AppError = require("../utils/AppError");
+const { randomUUID } = require('node:crypto');
+const { getSupabase, getBucket } = require('../config/supabase');
+const AppError = require('../utils/AppError');
 
-const EXT = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp" };
+const EXT = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
 
-async function uploadImage(file, folder = "packages") {
+async function uploadImage(file, folder = 'packages') {
   // ekstensi diambil dari MIME yang sudah divalidasi, bukan dari nama file pengguna
   const filePath = `${folder}/${Date.now()}-${randomUUID()}.${EXT[file.mimetype]}`;
   const supabase = getSupabase();
