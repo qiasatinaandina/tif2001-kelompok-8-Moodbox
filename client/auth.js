@@ -199,17 +199,11 @@ function setupRegisterForm(form) {
    ========================================= */
 
 function isValidEmail(value) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  return window.MoodboxValidation.isValidEmail(value);
 }
 
 function isValidEmailOrPhone(value) {
-  if (isValidEmail(value)) {
-    return true;
-  }
-
-  // Mendukung nomor Indonesia yang diawali 08 atau +62.
-  const normalized = value.replace(/[\s()-]/g, "");
-  return /^(?:\+62|62|0)8\d{7,12}$/.test(normalized);
+  window.MoodboxValidation.isValidEmailOrPhone(value);
 }
 
 function setError(inputId, errorId, message) {
