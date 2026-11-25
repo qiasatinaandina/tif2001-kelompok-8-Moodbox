@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
+const packageRoutes = require('./routes/package.routes');
+const { errorHandler } = require('./middlewares/errorHandler');
 
 const app = express();
 
@@ -18,5 +20,9 @@ app.get('/api/v1/health', (req, res) => {
 });
 
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/packages', packageRoutes);
+
+// Error handler harus paling akhir, setelah semua route
+app.use(errorHandler);
 
 module.exports = app;
