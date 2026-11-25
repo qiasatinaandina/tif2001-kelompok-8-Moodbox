@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard manajemen paket Moodbox - prototipe Meeting 11" />
+    <title>Manajemen Paket | Moodbox</title>
+    <link rel="stylesheet" href="management.css" />
+    <script src="management.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html" aria-label="Moodbox beranda">
+          <span class="brand-mark">M</span>
+          <span>moodbox<small>STUDIO MANAGEMENT</small></span>
+        </a>
+        <div class="side-label">MENU UTAMA</div>
+        <a class="nav-link active" href="management.html"><span>▦</span> Manajemen Paket</a>
+        <a class="nav-link" href="index.html"><span>⌂</span> Halaman Utama</a>
+        <div class="sidebar-note">
+          <span class="note-dot"></span>
+          <div><strong>Mode Demo</strong><small>Data sementara di browser</small></div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">MOODBOX / DASHBOARD</p>
+            <h1>Manajemen Paket</h1>
+            <p class="subheading">Kelola paket studio dan tampilannya dalam satu tempat.</p>
+          </div>
+          <div class="admin-chip">
+            <span class="avatar">A</span
+            ><span><strong>Admin Studio</strong><small>Administrator</small></span>
+          </div>
+        </header>
+
+        <section class="stats-grid" aria-label="Ringkasan data">
+          <article class="stat-card">
+            <span class="stat-icon lavender">▣</span>
+            <div>
+              <p>Total Paket</p>
+              <strong id="totalPackages">0</strong><small>Seluruh paket tersedia</small>
+            </div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon peach">◈</span>
+            <div>
+              <p>Kategori</p>
+              <strong id="totalCategories">0</strong><small>Kategori paket</small>
+            </div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon mint">✓</span>
+            <div>
+              <p>Ditampilkan</p>
+              <strong id="visiblePackages">0</strong><small>Sesuai pencarian/filter</small>
+            </div>
+          </article>
+        </section>
+
+        <section class="content-card">
+          <div class="section-heading">
+            <div>
+              <h2>Daftar Paket</h2>
+              <p>Kelola daftar paket foto Moodbox.</p>
+            </div>
+            <button class="primary-btn" id="addPackageBtn" type="button">
+              <span>＋</span> Tambah Paket
+            </button>
+          </div>
+
+          <div class="toolbar">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Cari nama atau deskripsi paket..."
+                autocomplete="off"
+              />
+              <kbd>⌘ K</kbd>
+            </label>
+            <label class="filter-control"
+              ><span>Kategori</span>
+              <select id="categoryFilter">
+                <option value="all">Semua kategori</option>
+              </select>
+            </label>
+            <label class="filter-control"
+              ><span>Baris</span>
+              <select id="pageSize">
+                <option value="5">5 / halaman</option>
+                <option value="8">8 / halaman</option>
+                <option value="10">10 / halaman</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>PAKET</th>
+                  <th>KATEGORI</th>
+                  <th>HARGA</th>
+                  <th>STATUS</th>
+                  <th class="action-head">AKSI</th>
+                </tr>
+              </thead>
+              <tbody id="packageTableBody"></tbody>
+            </table>
+            <div class="empty-state" id="emptyState" hidden>
+              <span>⌕</span><strong>Data tidak ditemukan</strong>
+              <p>Coba ubah kata kunci atau filter kategori.</p>
+              <button class="text-btn" id="resetFiltersBtn" type="button">Reset filter</button>
+            </div>
+          </div>
+          <footer class="table-footer">
+            <p id="paginationInfo">Menampilkan 0 data</p>
+            <nav class="pagination" id="pagination" aria-label="Navigasi halaman"></nav>
+          </footer>
+        </section>
+        <p class="demo-disclaimer">
+          Catatan: ini prototipe frontend Meeting 11. Perubahan data hanya tersimpan selama halaman
+          demo terbuka dan belum dikirim ke server.
+        </p>
+      </main>
+    </div>
+
+    <dialog id="packageDialog" class="package-dialog">
+      <form id="packageForm" novalidate>
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">FORM PAKET</p>
+            <h2 id="dialogTitle">Tambah Paket</h2>
+          </div>
+          <button class="icon-btn" id="closeDialogBtn" type="button" aria-label="Tutup">×</button>
+        </div>
+        <input type="hidden" id="packageId" />
+        <label class="field-label" for="packageName">Nama paket <span>*</span></label>
+        <input
+          class="form-input"
+          id="packageName"
+          maxlength="60"
+          placeholder="Contoh: Couple Signature"
+          required
+        />
+        <div class="form-row">
+          <div>
+            <label class="field-label" for="packageCategory">Kategori <span>*</span></label>
+            <select class="form-input" id="packageCategory" required>
+              <option value="">Pilih kategori</option>
+              <option>Individual</option>
+              <option>Couple</option>
+              <option>Family</option>
+              <option>Group</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label" for="packagePrice">Harga (Rp) <span>*</span></label>
+            <input
+              class="form-input"
+              id="packagePrice"
+              type="number"
+              min="1"
+              step="1000"
+              placeholder="150000"
+              required
+            />
+          </div>
+        </div>
+        <label class="field-label" for="packageDescription">Deskripsi</label>
+        <textarea
+          class="form-input"
+          id="packageDescription"
+          rows="3"
+          maxlength="180"
+          placeholder="Jelaskan isi atau keunggulan paket..."
+        ></textarea>
+        <label class="field-label">Foto paket <span class="optional">(opsional)</span></label>
+        <label class="upload-area" for="packageImageInput" id="uploadArea">
+          <img id="imagePreview" alt="Preview gambar paket" hidden />
+          <span class="upload-symbol">↑</span><strong>Pilih gambar untuk diunggah</strong
+          ><small>JPG, PNG, WEBP · Maksimal 2 MB</small>
+        </label>
+        <input id="packageImageInput" type="file" accept="image/jpeg,image/png,image/webp" hidden />
+        <p class="form-error" id="formError" role="alert"></p>
+        <div class="dialog-actions">
+          <button class="secondary-btn" id="cancelDialogBtn" type="button">Batal</button
+          ><button class="primary-btn" type="submit" id="savePackageBtn">Simpan Paket</button>
+        </div>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
